@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Homework 5</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Julius+Sans+One&display=swap" rel="stylesheet">
     <style>
         
         a {
             color: rgb(231, 81, 81);
+            font-size: 20px;
+        }
+
+        .navbar {
+            padding: 10px 0;
+            background-color: rgba(243, 164, 162, 0.635);
         }
 
         html, body {
@@ -26,19 +34,21 @@
         }
 
         h1 {
-            font-size: 45px;
+            font-size: 60px;
+            font-family: "Great Vibes", cursive;
+            letter-spacing: 2px;
             text-align: center;
             background-color: rgba(243, 164, 162, 0.635);
-            border-radius: 50px;
             padding: 15px 0;
+            margin-top: auto;
         }
 
         div {
             text-align: center;
         }
 
-        h2.about-me {
-            font-family:'Times New Roman', Times, serif;
+        h2{
+            font-family: "Julius Sans One", sans-serif;
             font-size: 25px;
         }
 
@@ -48,9 +58,10 @@
 
         p.introduction {
             font-family: Arial, Helvetica, sans-serif;
-            padding: 0 15%;
+            padding:0 20px;
             margin: 20px;
             margin-bottom: 30px;
+            text-align: justify;
         }
 
         p.instruction {
@@ -81,26 +92,25 @@
         img.product {
             border-top-left-radius: 50px;
         }
-
-        a {
-            font-size: 20px;
-        }
         
     </style>
 </head>
 <body>
-    <a href="index.html">[HOME]</a>
-    <a href="purchase.html">[PURCHASE]</a>
+    <div class="navbar">
+        <a href="index.html">[HOME]</a>
+        <a href="purchase.html">[PURCHASE]</a>
+    </div>
 
     <h1>Blanca Florist</h1>
 
     <div>
-    <h2 class="about-me">About Me</h2>
+    <h2>About Me</h2>
         <img id="profile-picture" src="images/florist.JPG" alt="profile-picture" width="200">
-        <p class="introduction">Hi! I'm <b>Selfi</b>, a freelance programmer and also a 
-            part-time florist. I love decorating flowers during my free time 
-            and have been doing my research about it for about 1,5 years. I 
-            sell some of them to fill in my free time while gaining some side income. 
+        <p class="introduction">Hi! I'm <b>Selfi</b>, a freelance programmer who 
+            also works as a part-time florist. I've been passionate about arranging 
+            flowers for the past year and a half, and I love turning that passion 
+            into beautiful bouquets. Occasionally, I sell my creations to share them 
+            with others while earning a little extra income.
         </p>
 
         <p class="instruction">Feel free to take a look at the catalogue below!</p>
