@@ -3,27 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework 3: Purchase Page</title>
+    <title>Purchase Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url("images/background2.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        a {
+            color: rgb(231, 81, 81);
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .navbar {
+            padding: 10px 0;
+            background-color: rgba(243, 164, 162, 0.635);
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-align: center;
+            background-color: rgba(243, 164, 162, 0.635);
+            padding: 15px 0;
+            margin-top: auto;
+        }
+        tr, h1, h3{
+            text-align: center;
+        }
+
+        h3{
+            font-family: "Julius Sans One", sans-serif;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+            text-align: left;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid rgb(221, 133, 133);
+            border-radius: 25px;
+        }
+
+        input, select {
+            border-radius: 15px;
+            margin-top: 5px;
+            padding: 5px 20px;
+        }
+
+        label {
+            font-family: "Playfair Display", serif;
+        }
+
+        #calculate {
+            background-color: rgb(65, 54, 54);
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #checkout {
+            background-color: rgb(231, 81, 81);
+            color: white;
+            padding: 10px 30px;
+            text-align: center;
+            display: block;
+            border: none;
+            border-radius: 5px;
+            margin: 10px auto;
+            cursor: pointer;
+        }
+
+
+    </style>
 </head>
 <body>
-    <a href="index.html">[HOME]</a>
-    <a href="purchase.html">[PURCHASE]</a>
+    <div class="navbar">
+        <a href="index.html">[HOME]</a>
+        <a href="purchase.html">[PURCHASE]</a>
+    </div>
 
     <h1>Order Your Freshly Hand-Tied Bouquet</h1>
 
-    <h3>Available Bouquet</h3>
+    <h3 id="available-bouquet">Available Bouquet</h3>
+    
     <table cellpadding="5" cellspacing="5">
-        <tr align="center">
+        <tr>
             <td>
                 <img src="images/red-rose.JPG" alt="red-rose" width="70">
             </td>
             <td>
                 <img src="images/white-rose.JPG" alt="white-rose" width="70">
             </td>
-            <td><img src="images/tulip.JPG" alt="tulip" width="70"></td>
+            <td>
+                <img src="images/tulip.JPG" alt="tulip" width="70">
+            </td>
         </tr>
 
-        <tr align="center">
+        <tr>
             <td>
                 <b>Red Rose </b><br>
                 RM 49
@@ -39,9 +138,10 @@
         </tr>
     </table><br>
 
+    <div class="form-container">
     <form>
         <label for="product-selection">Select your choice: </label>
-        <select name="product-selection">
+        <select name="product-selection"><br>
             <option value="Red Rose">Red Rose (RM49)</option>
             <option value="White Rose">White Rose (RM 45)</option>
             <option value="Tulip">Tulip (RM 45)</option>
@@ -52,13 +152,14 @@
         <input type="number" name="quantity" id="quantity">
         <br><br>
 
-        <button type="submit">Calculate</button>
+        <button type="submit" id="calculate">Calculate</button>
         <br><br>
 
         <label for="total">Total Price (RM):</label><br>
         <input type="text" name="total" id="total">
-        <br><br>
-
+        <br>
+    </form><br>
+    <form>
         <h3>Customer's Details</h3>
         <label for="name">Name:</label><br>
         <input type="text" name="name" id="name" required>
@@ -72,7 +173,9 @@
         <input type="email" name="email" id="email" required>
         <br><br>
 
-        <button type="submit">Checkout</button>
+        <button type="submit" id="checkout">Checkout</button>
     </form>
+</div><hr>
+    
 </body>
 </html>
