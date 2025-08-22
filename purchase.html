@@ -140,11 +140,11 @@
 
     <div class="form-container">
     <form>
-        <label for="product-selection">Select your choice: </label>
-        <select name="product-selection"><br>
-            <option value="Red Rose">Red Rose (RM49)</option>
-            <option value="White Rose">White Rose (RM 45)</option>
-            <option value="Tulip">Tulip (RM 45)</option>
+        <label for="products">Select your choice: </label>
+        <select id="products"><br>
+            <option value="Red Rose" data-price="49">Red Rose (RM49)</option>
+            <option value="White Rose" data-price="45">White Rose (RM 45)</option>
+            <option value="Tulip" data-price="45">Tulip (RM 45)</option>
         </select>
         <br><br>
 
@@ -152,11 +152,11 @@
         <input type="number" name="quantity" id="quantity">
         <br><br>
 
-        <button type="submit" id="calculate">Calculate</button>
+        <button type="button" id="calculate" onclick="calculateTotal()">Calculate</button>
         <br><br>
 
         <label for="total">Total Price (RM):</label><br>
-        <input type="text" name="total" id="total">
+        <input type="text" name="total" id="total" readonly>
         <br>
     </form><br>
     <form>
@@ -175,7 +175,18 @@
 
         <button type="submit" id="checkout">Checkout</button>
     </form>
-</div><hr>
+    </div><hr>
     
+    <script>
+        function calculateTotal() {
+            let selectedItem = products.options[products.selectedIndex].getAttribute("data-price"); 
+            let quantity = document.getElementById("quantity").value;
+
+            let total = Number(selectedItem) * Number(quantity);
+
+            document.getElementById("total").value = total.toFixed(2);
+        }
+    </script>
+
 </body>
 </html>
