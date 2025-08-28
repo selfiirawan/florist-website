@@ -23,14 +23,15 @@
         }
 
         a {
-            color: rgb(231, 81, 81);
+            color: rgb(255, 255, 255);
             font-size: 20px;
             text-decoration: none;
+            padding: 0 10px;
         }
 
         .navbar {
             padding: 10px 0;
-            background-color: rgba(243, 164, 162, 0.635);
+            background-color: rgb(0, 0, 0);
             text-align: center;
         }
         
@@ -54,7 +55,7 @@
             margin: 0 auto;
         }
 
-        form {
+        div.form-group {
             width: 300px;
             margin: 0 auto;
             text-align: left;
@@ -84,7 +85,7 @@
             cursor: pointer;
         }
 
-        #checkout {
+        .checkout {
             background-color: rgb(231, 81, 81);
             color: white;
             padding: 10px 30px;
@@ -101,8 +102,8 @@
 </head>
 <body>
     <div class="navbar">
-        <a href="index.html">[HOME]</a>
-        <a href="purchase.html">[PURCHASE]</a>
+        <a href="index.html">HOME</a>
+        <a href="purchase.html">PURCHASE</a>
     </div>
 
     <h1>Order Your Freshly Hand-Tied Bouquet</h1>
@@ -139,9 +140,10 @@
     </table><br>
 
     <div class="form-container">
-    <form>
+    <form action="savePurchase.php" method="post">
+        <div class="form-group">
         <label for="products">Select your choice: </label>
-        <select id="products"><br>
+        <select name="product" id="products"><br>
             <option value="Red Rose" data-price="49">Red Rose (RM49)</option>
             <option value="White Rose" data-price="45">White Rose (RM 45)</option>
             <option value="Tulip" data-price="45">Tulip (RM 45)</option>
@@ -157,9 +159,10 @@
 
         <label for="total">Total Price (RM):</label><br>
         <input type="text" name="total" id="total" readonly>
+        </div>
         <br>
-    </form><br>
-    <form>
+        <br><br>
+        <div class="form-group">
         <h3>Customer's Details</h3>
         <label for="name">Name:</label><br>
         <input type="text" name="name" id="name" required>
@@ -173,7 +176,8 @@
         <input type="email" name="email" id="email" required>
         <br><br>
 
-        <button type="submit" id="checkout">Checkout</button>
+        <button type="submit" class="checkout">Checkout</button>
+        </div>
     </form>
     </div><hr>
     
